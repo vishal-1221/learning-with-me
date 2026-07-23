@@ -1,5 +1,6 @@
 package com.learning.topic.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,64 +9,139 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/topic/v1")
 public class HelloController {
 
-    @GetMapping(value = "/hello")
-    public String getDetails()
-    {
-        return "Once upon a time, there were two siblings named Chotu and Pallu. They were famous in their neighborhood—not for studying or helping at home—but for being unbelievably lazy.\n" +
-                "\n" +
-                "Every morning, their mother would say,\n" +
-                "\"Wake up! It's already 9 o'clock!\"\n" +
-                "\n" +
-                "Chotu would reply,\n" +
-                "\"Five more minutes...\"\n" +
-                "\n" +
-                "Pallu would answer,\n" +
-                "\"Can you wake me up after Chotu wakes up?\"\n" +
-                "\n" +
-                "One day, the TV remote was just two feet away from them.\n" +
-                "\n" +
-                "Chotu looked at Pallu and said,\n" +
-                "\"Pallu, can you pass me the remote?\"\n" +
-                "\n" +
-                "Pallu sighed,\n" +
-                "\"You are closer.\"\n" +
-                "\n" +
-                "\"But we're sitting on the same sofa!\"\n" +
-                "\n" +
-                "\"Exactly. That's why you should take it.\"\n" +
-                "\n" +
-                "After ten minutes of arguing, their father walked in, picked up the remote, and switched off the TV.\n" +
-                "\n" +
-                "Another day, they were both hungry.\n" +
-                "\n" +
-                "Chotu asked,\n" +
-                "\"Can you make some noodles?\"\n" +
-                "\n" +
-                "Pallu replied,\n" +
-                "\"I was hoping you'd ask so I could say no.\"\n" +
-                "\n" +
-                "They finally ordered food online because neither of them wanted to walk to the kitchen.\n" +
-                "\n" +
-                "Their laziness became legendary.\n" +
-                "\n" +
-                "One afternoon, it started raining. The window was open, and rainwater was coming inside.\n" +
-                "\n" +
-                "Chotu said,\n" +
-                "\"Pallu, can you close the window?\"\n" +
-                "\n" +
-                "Pallu replied,\n" +
-                "\"If the rain really wants to come in, who are we to stop it?\"\n" +
-                "\n" +
-                "By evening, the floor was completely wet.\n" +
-                "\n" +
-                "Their mother couldn't stop laughing and said,\n" +
-                "\"I've never seen two people work so hard just to avoid working!\"\n" +
-                "\n" +
-                "From that day on, Chotu and Pallu promised to become a little more active.\n" +
-                "\n" +
-                "...They decided they'd start tomorrow.\n" +
-                "\n" +
-                "And, of course, tomorrow never came!";
+    @GetMapping(value = "/story", produces = MediaType.TEXT_HTML_VALUE)
+    public String getStory() {
+
+        return """
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Dhriti Porter's Adventure</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                background:#f4f8ff;
+                margin:40px;
+                line-height:1.8;
+            }
+            .card{
+                max-width:900px;
+                margin:auto;
+                background:white;
+                padding:30px;
+                border-radius:15px;
+                box-shadow:0 5px 15px rgba(0,0,0,.2);
+            }
+            h1{
+                color:#ff4081;
+                text-align:center;
+            }
+            h2{
+                color:#2196F3;
+            }
+            img{
+                width:100%;
+                border-radius:15px;
+            }
+            p{
+                font-size:18px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <div class="card">
+
+        <h1>🌸 The Magical Adventure of Little Dhriti Porter 🌸</h1>
+
+        <img src="/images/13864.jpg"
+             alt="Happy Family">
+
+        <p>
+        In a cozy little town lived a cheerful little girl named
+        <b>Dhriti Porter</b>. She had sparkling eyes, a bright smile,
+        and endless curiosity.
+        </p>
+
+        <p>
+        Her loving mother <b>Nayan</b> always encouraged her to dream big.
+        Every morning she would say,
+        </p>
+
+        <blockquote>
+        "Good morning, my little sunshine! Today is another beautiful day to learn something new."
+        </blockquote>
+
+        <p>
+        Dhriti would happily run into the kitchen,
+        give her mother a warm hug,
+        and help set the breakfast table.
+        </p>
+
+        <p>
+        Her father <b>Harsh</b> loved telling bedtime stories.
+        Every evening after work,
+        he would lift Dhriti into the air,
+        making her laugh louder than the birds outside.
+        </p>
+
+        <blockquote>
+        "One day," Harsh smiled,
+        "you will become someone who spreads kindness everywhere."
+        </blockquote>
+
+        <h2>🌈 A Special Day</h2>
+
+        <p>
+        One Sunday the family decided to visit a beautiful park.
+        They played football,
+        flew colorful kites,
+        fed tiny ducks,
+        and enjoyed delicious ice cream together.
+        </p>
+
+        <p>
+        While walking home,
+        Dhriti noticed a small lost puppy.
+        She gently offered it some water and stayed beside it until its owner arrived.
+        </p>
+
+        <p>
+        Nayan smiled proudly and said,
+        </p>
+
+        <blockquote>
+        "Kindness is the greatest superpower anyone can have."
+        </blockquote>
+
+        <p>
+        Harsh nodded and added,
+        </p>
+        
+      
+
+        <blockquote>
+        "And today, our little Dhriti proved she has that superpower."
+        </blockquote>
+        
+          <p>
+        A special thanks to your wonderful Maasi, whose love, care, and blessings have always been a beautiful part of your life. Wishing her happiness and good health too
+        </p>
+
+        <h2>❤️ The Moral</h2>
+
+        <p style="font-size:20px;">
+        Family is where love begins,
+        kindness grows,
+        and every little adventure becomes a lifelong memory.
+        </p>
+
+    </div>
+
+    </body>
+    </html>
+    """;
     }
 
 }

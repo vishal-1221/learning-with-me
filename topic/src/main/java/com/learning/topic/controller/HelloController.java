@@ -18,35 +18,69 @@ public class HelloController {
                 <head>
                     <title>Dhriti's Little Farm</title>
                     <style>
-                        body{
-                            font-family: Arial, sans-serif;
-                            background:#f4f8ff;
-                            margin:40px;
-                            line-height:1.8;
-                        }
-                        .card{
-                            max-width:900px;
-                            margin:auto;
-                            background:white;
-                            padding:30px;
-                            border-radius:15px;
-                            box-shadow:0 5px 15px rgba(0,0,0,.2);
-                        }
-                        h1{
-                            color:#4CAF50;
-                            text-align:center;
-                        }
-                        h2{
-                            color:#2196F3;
-                        }
-                        img{
-                            width:100%;
-                            border-radius:15px;
-                        }
-                        p{
-                            font-size:18px;
-                        }
-                    </style>
+                                    body{
+                                        font-family: Arial, sans-serif;
+                                        background:#f4f8ff;
+                                        margin:40px;
+                                        line-height:1.8;
+                                    }
+                            
+                                    .card{
+                                        max-width:900px;
+                                        margin:auto;
+                                        background:white;
+                                        padding:30px;
+                                        border-radius:15px;
+                                        box-shadow:0 5px 15px rgba(0,0,0,.2);
+                                    }
+                            
+                                    h1{
+                                        color:#4CAF50;
+                                        text-align:center;
+                                    }
+                            
+                                    h2{
+                                        color:#2196F3;
+                                    }
+                            
+                                    p{
+                                        font-size:18px;
+                                    }
+                            
+                                    blockquote{
+                                        font-size:18px;
+                                        font-style:italic;
+                                        color:#555;
+                                        background:#f9f9f9;
+                                        padding:15px;
+                                        border-left:5px solid #4CAF50;
+                                        border-radius:8px;
+                                        margin:20px 0;
+                                    }
+                            
+                                    .image-container{
+                                        display:flex;
+                                        gap:20px;
+                                        margin:25px 0;
+                                    }
+                            
+                                    .image-container img{
+                                        width:50%;
+                                        border-radius:15px;
+                                        object-fit:cover;
+                                        box-shadow:0 4px 10px rgba(0,0,0,0.2);
+                                    }
+                            
+                                    @media(max-width:768px){
+                                        .image-container{
+                                            flex-direction:column;
+                                        }
+                            
+                                        .image-container img{
+                                            width:100%;
+                                        }
+                                    }
+                                </style>
                 </head>
 
                 <body>
@@ -55,8 +89,13 @@ public class HelloController {
 
                     <h1>🌻 Dhriti and Her Little Farm 🌻</h1>
 
-                    <img src="/images/Dhriti.jpg"
-                         alt="Little Girl on a Farm">
+                  <div class="image-container">
+                         <img src="/images/Dhriti.jpg"
+                              alt="Dhriti with MooMoo">
+                 
+                         <img src="/images/dh.png"
+                              alt="Dhriti with Asha and Gauri">
+                     </div>
 
                     <p>
                         In a peaceful little village lived a kind and cheerful girl named
